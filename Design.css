@@ -1,0 +1,30 @@
+canvas {
+    background-color: white;
+    
+    image-rendering: crisp-edges !important;
+
+    border: 5px red solid;
+    
+}
+
+h2 {
+    background-color: white;
+    
+    font-size: 35px;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+h3 {
+    font-size: 25px;
+}
+
+label {
+    font-size: 22px;
+}
+
+#click_pos_1, #click_pos_2{
+    font-size: 25px;
+}
