@@ -146,6 +146,75 @@ function Basico(x0, y0, x1, y1) {
 
 }
 
+
+//Método DDA
+function DDA(x0, y0, x1, y1) {
+
+    var delta_x = 0;
+    var delta_y = 0;
+    var m = 0;
+
+    var yk = 0;
+    var xk = 0;
+
+    var x = 0;
+    var y = 0;
+
+    var diferente = 0;
+    var valor_diferente = 0;
+
+
+    //Casos ambos negativos 
+    if (1 == 2) {
+
+    }
+    //Caso normales
+    else{
+
+    //Calcular deltas
+    delta_x = Math.abs(X0 - X1);
+    delta_y = Math.abs(y0 - y1);
+    
+    //Calcular que delta es mayor
+    if (delta_x > delta_y){
+        m = delta_y / delta_x;
+        valor_diferente = y1;
+        
+        imprimir_dda();
+        
+    }else{
+        m = delta_x / delta_y;
+        valor_diferente = x1;
+    }
+
+
+
+
+
+
+    m = 0;
+
+    }
+
+    
+
+}
+
+
+//Función imprimir DDA
+function imprimir_dda(x, y){
+
+    while (diferente != valor_diferente){
+        
+
+
+
+        setPixel(x, y, color[2]);        
+    }
+}
+
+
+//Obtener posición del mouse
 function getMousePos(canvas, evt) {
     
     //Aumenta el contador para saber en cual click vamos
@@ -229,4 +298,4 @@ function getMousePos(canvas, evt) {
         //     "0 - " + contador + " - " + x0 + " - " + y0
         // );
     }
-}
+}	
