@@ -1,37 +1,5 @@
 //Método DDA
-function DDA( ya,yb, xa ) {
-	ya = Math.round( ya );
-	yb = Math.round( yb );
-	xa = Math.round( xa );
-	
-	var y = ya < yb ? ya : yb,
-		i = Math.abs( ya - yb );
-	for( ; i >= 0; i-- ) {
-        setPixel(xa, y+1, color[1]);
-        listado_coordenadas.innerHTML += 
-        "x = [" + xa + "] " +
-        "y = [" + y+1 + "] " +
-        "<br>";
-	}
-}
-
-function hLine( xa,xb, ya ) {
-	xa = Math.round( xa );
-	xb = Math.round( xb );
-	ya = Math.round( ya );
-	
-	var x = xa < xb ? xa : xb,
-		i = Math.abs( xa - xb );
-	for( ; i >= 0; i-- ) {
-        setPixel(x+1, ya, color[1]);
-        listado_coordenadas.innerHTML += 
-        "x = [" + x+1 + "] " +
-        "y = [" + ya + "] " +
-        "<br>";
-	}
-}
-
-function line( xa,ya, xb,yb ) {
+function DDA( xa,ya, xb,yb ) {
 	xa = Math.round( xa );
 	ya = Math.round( ya );
 	xb = Math.round( xb );
@@ -100,5 +68,37 @@ function line( xa,ya, xb,yb ) {
             "<br>";
 		}
 		
+	}
+}
+
+function vLine( ya,yb, xa ) {
+	ya = Math.round( ya );
+	yb = Math.round( yb );
+	xa = Math.round( xa );
+	
+	var y = ya < yb ? ya : yb,
+		i = Math.abs( ya - yb );
+	for( ; i >= 0; i-- ) {
+        setPixel(xa, y+1, color[1]);
+        listado_coordenadas.innerHTML += 
+        "x = [" + xa + "] " +
+        "y = [" + y+1 + "] " +
+        "<br>";
+	}
+}
+
+function hLine( xa,xb, ya ) {
+	xa = Math.round( xa );
+	xb = Math.round( xb );
+	ya = Math.round( ya );
+	
+	var x = xa < xb ? xa : xb,
+		i = Math.abs( xa - xb );
+	for( ; i >= 0; i-- ) {
+        setPixel(x+1, ya, color[1]);
+        listado_coordenadas.innerHTML += 
+        "x = [" + x+1 + "] " +
+        "y = [" + ya + "] " +
+        "<br>";
 	}
 }
