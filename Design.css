@@ -1,9 +1,9 @@
 canvas {
-    background-color: white;
+    background-color: rgb(202, 202, 202);
     
     image-rendering: crisp-edges !important;
 
-    border: 5px red solid;
+    /* border: 5px red solid; */
     
 }
 
@@ -26,5 +26,13 @@ label {
 }
 
 #click_pos_1, #click_pos_2{
+    font-size: 25px;
+}
+
+#Benchmark {
+    font-size: 30px;
+}
+
+#tiempo_basico, #tiempo_dda, #tiempo_bresenham {
     font-size: 25px;
 }

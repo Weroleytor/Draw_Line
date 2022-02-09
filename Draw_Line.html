@@ -24,11 +24,24 @@
 
     <br><br>
 
-    <div id="click_pos_1">Las coordenadas del primer click son: X<sub>1</sub>[0] y Y<sub>1</sub>[0]</div>
-    <div id="click_pos_2">Las coordenadas del segundo click son: X<sub>2</sub>[0] y Y<sub>2</sub>[0]</div>
+    <h2>Tiempos necesarios para realizar los cálculos:</h2>
     
     
-    <canvas id="canvas" width="900" height="540"></canvas>
+
+    <div id="tiempo_basico">Básico:</div>
+    <div id="tiempo_dda">DDA:</div>
+    <div id="tiempo_bresenham">Bresenham:</div>
+
+    
+    <br><br>
+    <input onclick="Benchmark()" type="button" id="Benchmark" name="Benchmark" value="Benchmark">
+    
+    <br><br>
+    <!-- <div id="click_pos_1">Las coordenadas del primer click son: X<sub>1</sub>[0] y Y<sub>1</sub>[0]</div>
+    <div id="click_pos_2">Las coordenadas del segundo click son: X<sub>2</sub>[0] y Y<sub>2</sub>[0]</div> -->
+    
+    
+    <canvas id="canvas" width="1002" height="1002"></canvas>
 
     <br><br>
 
@@ -40,6 +53,7 @@
     <script src="metodo_basico.js"></script>
     <script src="metodo_dda.js"></script>
     <script src="metodo_bresenham.js"></script>
+    <script src="boton_benchmark.js"></script>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 //Método DDA
-function DDA( xa,ya, xb,yb ) {
+function DDA(xa, ya, xb, yb, var_color) {
 	xa = Math.round( xa );
 	ya = Math.round( ya );
 	xb = Math.round( xb );
@@ -11,10 +11,10 @@ function DDA( xa,ya, xb,yb ) {
 		h, i;
 	
 	if( dx === 0 ) {
-		vLine( ya,yb, xa );
+		vLine(ya, yb, xa, var_color);
 		return;
 	} else if( dy === 0 ) {
-		hLine( xa,xb, ya );
+		hLine(xa, xb, ya, var_color);
 		return;
 	}
 	
@@ -27,11 +27,11 @@ function DDA( xa,ya, xb,yb ) {
 	if( dx >= dy ) {
 
 		h = -dx;
-        setPixel(xa, ya, color[1]);
-        listado_coordenadas.innerHTML += 
-        "x = [" + xa + "] " +
-        "y = [" + ya + "] " +
-        "<br>";
+        setPixel(xa, ya, color[var_color]);
+        // listado_coordenadas.innerHTML += 
+        // "x = [" + xa + "] " +
+        // "y = [" + ya + "] " +
+        // "<br>";
 		for( i = dx; i > 0; i-- ) {
 			xa += cInc;
 			h += 2*dy;
@@ -39,21 +39,21 @@ function DDA( xa,ya, xb,yb ) {
 				ya += rInc;
 				h -= 2*dx;
 			}
-            setPixel(xa, ya, color[1]);
-            listado_coordenadas.innerHTML += 
-            "x = [" + xa + "] " +
-            "y = [" + ya + "] " +
-            "<br>";
+            setPixel(xa, ya, color[var_color]);
+            // listado_coordenadas.innerHTML += 
+            // "x = [" + xa + "] " +
+            // "y = [" + ya + "] " +
+            // "<br>";
 		}
 		
 	} else {
 
 		h = -dy;
-        setPixel(xa, ya, color[1]);
-        listado_coordenadas.innerHTML += 
-        "x = [" + xa + "] " +
-        "y = [" + ya + "] " +
-        "<br>";
+        setPixel(xa, ya, color[var_color]);
+        // listado_coordenadas.innerHTML += 
+        // "x = [" + xa + "] " +
+        // "y = [" + ya + "] " +
+        // "<br>";
 		for( i = dy; i > 0; i-- ) {
 			ya += rInc;
 			h += 2*dx;
@@ -61,17 +61,17 @@ function DDA( xa,ya, xb,yb ) {
 				xa += cInc;
 				h -= 2*dy;
 			}
-            setPixel(xa, ya, color[1]);
-            listado_coordenadas.innerHTML += 
-            "x = [" + xa + "] " +
-            "y = [" + ya + "] " +
-            "<br>";
+            setPixel(xa, ya, color[var_color]);
+            // listado_coordenadas.innerHTML += 
+            // "x = [" + xa + "] " +
+            // "y = [" + ya + "] " +
+            // "<br>";
 		}
 		
 	}
 }
 
-function vLine( ya,yb, xa ) {
+function vLine(ya, yb, xa, var_color) {
 	ya = Math.round( ya );
 	yb = Math.round( yb );
 	xa = Math.round( xa );
@@ -79,15 +79,15 @@ function vLine( ya,yb, xa ) {
 	var y = ya < yb ? ya : yb,
 		i = Math.abs( ya - yb );
 	for( ; i >= 0; i-- ) {
-        setPixel(xa, y+1, color[1]);
-        listado_coordenadas.innerHTML += 
-        "x = [" + xa + "] " +
-        "y = [" + y+1 + "] " +
-        "<br>";
+        setPixel(xa, y+1, color[var_color]);
+        // listado_coordenadas.innerHTML += 
+        // "x = [" + xa + "] " +
+        // "y = [" + y+1 + "] " +
+        // "<br>";
 	}
 }
 
-function hLine( xa,xb, ya ) {
+function hLine(xa, xb, ya, var_color) {
 	xa = Math.round( xa );
 	xb = Math.round( xb );
 	ya = Math.round( ya );
@@ -95,10 +95,10 @@ function hLine( xa,xb, ya ) {
 	var x = xa < xb ? xa : xb,
 		i = Math.abs( xa - xb );
 	for( ; i >= 0; i-- ) {
-        setPixel(x+1, ya, color[1]);
-        listado_coordenadas.innerHTML += 
-        "x = [" + x+1 + "] " +
-        "y = [" + ya + "] " +
-        "<br>";
+        setPixel(x+1, ya, color[var_color]);
+        // listado_coordenadas.innerHTML += 
+        // "x = [" + x+1 + "] " +
+        // "y = [" + ya + "] " +
+        // "<br>";
 	}
 }

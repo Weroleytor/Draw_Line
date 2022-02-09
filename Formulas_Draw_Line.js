@@ -103,19 +103,19 @@ function getMousePos(canvas, evt) {
         listado_coordenadas.innerHTML = "";
 
 
-        click_pos_2.innerHTML = "Las coordenadas del segundo click son: X<sub>2</sub>[" +
-        x1 + "] y Y<sub>2</sub>[" + y1 + "]";
+        // click_pos_2.innerHTML = "Las coordenadas del segundo click son: X<sub>2</sub>[" +
+        // x1 + "] y Y<sub>2</sub>[" + y1 + "]";
 
         //Seleccionar el método y mandar datos
         if(document.getElementById('basico').checked) {
             console.log("Método Básico");
-            Basico(x0, y0, x1, y1);
+            Basico(x0, y0, x1, y1, 1);
         }else if(document.getElementById('DDA').checked) {
             console.log("Método DDA");
-            line(x0, y0, x1, y1);
+            DDA(x0, y0, x1, y1, 2);
         }else if(document.getElementById('bresenham').checked) {
             console.log("Método Bresenham");
-            Bresenham(x0, y0, x1, y1);
+            Bresenham(x0, y0, x1, y1, 0);
         }
 
 
@@ -131,11 +131,7 @@ function getMousePos(canvas, evt) {
         x0 = x;
         y0 = Math.trunc(y);
     
-        click_pos_1.innerHTML = "Las coordenadas del primer click son: X<sub>1</sub>[" +
-            x0 + "] y Y<sub>1</sub>[" + y0 + "]";
-
-        // console.log(
-        //     "0 - " + contador + " - " + x0 + " - " + y0
-        // );
+        // click_pos_1.innerHTML = "Las coordenadas del primer click son: X<sub>1</sub>[" +
+        //     x0 + "] y Y<sub>1</sub>[" + y0 + "]";
     }
 }	
